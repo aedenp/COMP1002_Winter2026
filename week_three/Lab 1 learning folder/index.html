@@ -49,6 +49,43 @@
                     <input type="password" id="password" name="password" placeholder="Choose your password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
                            title="Password must contain at least 8 characters including one uppercase letter, one lowercase letter, one number and one special character (@$!%*?&)" required>
                     
+                        <label for="prefrences"> Preferences: </label>
+                        <input type="checkbox" id="prefrences" name="prefrences" <label for="prefrences"> Accept Terms and Conditions </label>
+                        <input type="checkbox" id="prefrences" name="prefrences" <label for="prefrences"> Receive Newsletter </label>
+
+                        <legend>Gender</legend>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="non-binary" name="gender" value="non-binary">
+                        <label for="non-binary">Non-binary</label>
+
+                        <label for="country">Select Country:</label>
+                        <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="MX">Mexico</option>
+                        <option value="OTR">Other</option>
+                        </select>
+
+                        
+                        <label for="user-comment">Leave a Comment:</label>
+                        <textarea
+                        id="user-comment"
+                        name="comment"
+                        rows="5"
+                        cols="40"
+                        placeholder="Share your thoughts..."
+                        maxlength="500">
+                        </textarea>
+                        </form>
+
+
+
                     <label for="password_confirm"> * Confirm Password: </label>
                     <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm your password" required>
 
