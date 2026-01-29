@@ -105,11 +105,23 @@ article p:first-of-type::before{
 
 /* Element selector */
 
+p{
+  color: blueviolet;
+}
 
+.quiz-item{
+  color: blue;
+}
+
+#q1{
+  color: red;
+}
 
 /* ROUND TWO/ Q2 - What background colour will the element have? */
 
-
+.quiz-item{
+  background-color: aqua;
+}
 
 /* ROUND THREE/ Q3 - What colour will the element be? */
 
