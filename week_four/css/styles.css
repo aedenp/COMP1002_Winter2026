@@ -4,7 +4,7 @@
 
 /* Activity Two - Explore the CSS Style Ruleset */
 body {
-  font-family: system-ui, Arial, sans-serif;
+  font-family: system-ui, Helvetica, sans-serif, sans-serif;
   line-height: 1.5;
   margin: 0;
   padding: 16px;
@@ -37,20 +37,39 @@ code {
 
 /* Element selector */
 
+p{ 
+  color: #030303;
+}
 
 /* Contextual selector (descendant)  - look up combinators on mdn web docs */
 
+article p{
+  color: #450;
+}
 
 /* Pseudo-class: first paragraph of its type */
 
+p:hover {
+  color: red;
+}
 
 /* Class selector */
 
-/* Attribute selector (article attribute affects paragraph) */
+.note {
+  color: rgb(247, 5, 190);
+}
 
+/* Attribute selector (article attribute affects background) */
+
+article[data-role=student] {
+  background-color: #450;
+}
 
 /* ID selector (strongest so far) */
 
+#special-note{
+  color: #ea8d02;
+}
 
 /* Pseduo - Element */
 
