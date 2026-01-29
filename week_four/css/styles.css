@@ -73,7 +73,7 @@ article[data-role=student] {
 
 /* Pseduo - Element */
 
-article p:first-of-type: :before{
+article p:first-of-type::before{
   content: "First Paragraph";
 }
 
