@@ -123,9 +123,19 @@ p{
   background-color: aqua;
 }
 
+.highlight {
+  background-color: purple;
+}
+
 /* ROUND THREE/ Q3 - What colour will the element be? */
 
+p [data-level="hard"] {
+  background-color:#ea8d02;
+}
 
+.quiz-item {
+  background-color: rgb(22, 208, 47);
+}
 
 /* =========================
      SECTION 3: Box model (form)
@@ -139,12 +149,19 @@ p{
 
 /* Visualize the box */
 
+.form-box {
+  display: block;
+  border: 2px dashed rgb(103, 125, 15);
+  padding: 15px;
+  margin: 100px 30px 40px 10px;
+}
 
 /* Each field becomes a visible block with spacing */
 .field {
   display: block;
   border: 2px dashed #aaa;
   padding: 10px;
+  margin: 10px 0;
 }
 
 .field span {
@@ -156,7 +173,12 @@ p{
 /* Inputs/selects: give visible borders so students can inspect sizing */
 .field input,
 .field select {
- 
+ width: 100%;
+ border: 2px solid #450;
+ padding: 10px;
+ box-sizing: border-box;
+ border-radius: 2px;
+
 }
 
 /* Primary button */
