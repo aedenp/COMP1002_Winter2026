@@ -40,6 +40,7 @@ what kind of selector is this? */
 /* Main content panel */
 main {
   background: #eee;
+  padding: 1.6rem;
 }
 /*root element for setting font size */
 html {
@@ -72,6 +73,9 @@ nav h1 {
 ========================================================= */
 section {
     background: #fff;      /* makes sections stand out on main's gray */
+    padding: 1.6rem 2.2rem;      /* internal space */
+    margin: 1.6rem 0;          /* external space */
+    border: 1px dashed #450;  /* light border to define edges */
   }
 
 
@@ -84,24 +88,37 @@ section {
    - It scrolls normally until it reaches top: 0
    - Then it "sticks" without being removed from layout flow like fixed */
 header {
- 
+ position: sticky;
+ top: 0;
+ background-color: #000;
+  z-index: 1000; /* ensure it stays on top of other content when scrolling */
 }
 
 /* Give the nav area some internal space */
 nav {
-
+padding: 0.8rem 0 1.2rem;
 }
 
 /* Flexbox is ideal for horizontal nav links */
 nav ul {
-
+list-style:none;
+display: flex; /* activate flexbox */
+gap: 1.6rem; /* space between items */
+flex-wrap: wrap; /* allow items to wrap to new line if needed */
 }
 
 
 nav a {
 
   text-decoration: none; /* remove default underline */
-  
+  text-transform: uppercase; /* uppercase for nav links */
+  display: inline-block; /* allows padding/margin to be applied */
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #450;
+  border-radius: 8px;
+  transition: background-color 0.5s, color 0.5s; /* smooth hover transitions */ 
 }
 
 
