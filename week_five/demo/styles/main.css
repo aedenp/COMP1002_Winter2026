@@ -24,7 +24,9 @@
 body {
   background: #000;
   color: #111;
-
+  font-size: 1.6rem;
+  line-height: 1.8;
+ font-family: "Pacifico", cursive;
 }
 
 /* create a container 
@@ -39,7 +41,10 @@ what kind of selector is this? */
 main {
   background: #eee;
 }
-
+/*root element for setting font size */
+html {
+  font-size: 10px;
+}
 /* =========================================================
   STEP TWO  — Let's Add Some Style To Our Text
 ========================================================= */
@@ -49,7 +54,13 @@ h3,
 h4,
 h5,
 h6 {
-  
+  .gravitas-one-regular 
+  font-family: "Gravitas One", serif;
+  /*different units for setting size - px, em, rem */
+  font-size: 3rem;
+  color: #450;
+}
+
 }
 
 /* Optional: Make the nav title readable on dark header */
@@ -88,6 +99,8 @@ nav ul {
 
 
 nav a {
+
+  text-decoration: none; /* remove default underline */
   
 }
 
