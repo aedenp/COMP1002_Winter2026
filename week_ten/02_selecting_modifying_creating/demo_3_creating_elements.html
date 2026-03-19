@@ -1,29 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>DOM Demo 3 – Creating Elements (Student)</title>
-<style>
-body{font-family:Arial;margin:40px;background:#f5f7fb}
-section{background:white;padding:20px;border-radius:10px;max-width:800px}
-button{padding:8px 12px;margin:6px}
-input{padding:6px}
-</style>
-</head>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <title>DOM Demo 3 – Creating Elements (Student)</title>
+        <style>
+            body{font-family:Arial;margin:40px;background:#f5f7fb}
+            section{background:white;padding:20px;border-radius:10px;max-width:800px}
+            button{padding:8px 12px;margin:6px}
+            input{padding:6px}
+        </style>
+    </head>
 <body>
 
-<section>
-<h1>Creating Elements Demo</h1>
+    <section>
+        <h1>Creating Elements Demo</h1>
 
-<input type="text" id="task-input" placeholder="Enter task">
-<button id="add-btn">Add Task</button>
+            <input type="text" id="task-input" placeholder="Enter task">
+            
+            <button id="add-btn">Add Task</button>
 
-<ul id="task-list"></ul>
+            <ul id="task-list"></ul>
 
-</section>
+    </section>
 
 <script>
+let taskInput = document.querySelector('#task-input');
+let taskList = document.querySelector('#task-list');
+let addTaskBtn = document.querySelector('#add-btn');
 
+//listen for click of button, then create new elements and add to the list
+addTaskBtn.addEventListener('click', function() {
+    // 1. Create a new li element
+    let newTask = document.createElement('li');
+    
+    if(taskInput.value.trim() === ""){
+
+        newTask.textcontent = "New Task";
+    }
+    else{
+        newTask.textContent = taskInput.value;
+    }
+
+    taskList.appendChild(newTask);
+    
+    taskInput.value = '';
+});
 // TODO:
 // 1. Select the button
 // 2. Create a new li element

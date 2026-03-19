@@ -12,21 +12,43 @@ button{padding:8px 12px;margin:6px}
 <body>
 
 <section>
-<h1 id="heading">Original Heading</h1>
-<p id="message">This paragraph will change.</p>
+    <h1 id="heading">Original Heading</h1>
+    <p id="message">This paragraph will change.</p>
 
-<button id="text-btn">Change Text</button>
-<button id="style-btn">Change Style</button>
+    <button id="text-btn">Change Text</button>
+    <button id="style-btn">Change Style</button>
 
 </section>
 
 <script>
+//select the elements once and store references in variables
+let heading = document.querySelector('#heading');
+let message = document.querySelector('#message');
+let textBtn = document.querySelector('#text-btn');
+let styleBtn = document.querySelector('#style-btn');
 
-// TODO: Change the heading text when the button is clicked
-// Hint: textContent
+//change the text content of the heading and message when the text button is clicked
+textBtn.addEventListener('click', function() {
+    //modify the elements - modify text and HTML content
+    heading.textContent = 'The heading has been changed';
+    message.innerHTML = 'The <strong>paragraph</strong> has also been changed';
+});
 
-// TODO: Change the heading color
-// Hint: element.style.color
+//change the style of the heading and message when the style button is clicked
+styleBtn.addEventListener('click', function() {
+    heading.style.color = '#450';
+    heading.style.backgrounfColor = '#ff0';
+    heading.style.padding = '10px';
+});
+
+//change styles of messages with the style property
+styleBtn.addEventListener('click', function() {
+
+message.style.color = '#450';
+message.style.backgroundColor = '#eee';
+message.style.padding = '10px'; 
+
+});
 
 </script>
 
